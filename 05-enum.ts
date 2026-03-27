@@ -1,14 +1,11 @@
 (() => {
     enum Role {
-        // SuperAdmin,
-        // SuperAdmin = 1,
         SuperAdmin = 'SuperAdmin',
-        // Teacher,
+        ProgramHead = 'ProgramHead',
         Teacher = 'Teacher',
-        // Student,
         Student = 'Student',
     }
 
-    // let userRole: Role = 0;
-    let userRole: Role = Role.SuperAdmin;
-})
+    let userRole: Role = Role.ProgramHead;
+    console.log(userRole); // 'ProgramHead'
+})();
