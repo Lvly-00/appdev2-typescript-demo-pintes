@@ -1,11 +1,11 @@
 // console.log("Hello World!")
 
-let userName: string = "Elmer";
-let userAge = 31;
+let userName: string = "Lovely";
+let userAge: number = 20;
 
 // ...
 
-userAge = "31"
+userAge = 19
 
 console.log(`Username - ${userName}`)
 console.log(`Age - ${userAge}`)
@@ -18,3 +18,6 @@ add(10)
 // add('10')
 add(10, 6)
 // add(10, '6')
+
+console.log(add(22))
+console.log(add(5, 3))
