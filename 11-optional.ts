@@ -1,9 +1,14 @@
 // Optional Values in parameter
 function generateError(msg?: string) {
-    throw new Error(msg)
+    throw new Error(msg ?? "Something went wrong")
 }
 
-generateError("An error occured") // Automatic Semicolon Insertion pitfall - add ; to explicitly tell that this is a function
+try {
+    generateError("An error occured");
+} catch (err) {
+    console.log("Caught error:", (err as Error).message);
+}
+// Automatic Semicolon Insertion pitfall - add ; to explicitly tell that this is a function
 // generateError()
 
 
@@ -16,8 +21,8 @@ generateError("An error occured") // Automatic Semicolon Insertion pitfall - add
     }
 
     let user: User = {
-        name: 'Elmer',
-        age: 31
+        name: 'Lovely',
+        age: 20
     }
 
     user.name
@@ -25,7 +30,10 @@ generateError("An error occured") // Automatic Semicolon Insertion pitfall - add
 })
 
 // Nullish Coalescing `??` operator 
-let input = ''
+let input = 0;
+
+console.log(input ?? 100); // 0
+console.log(input || 100); // 100
 const didProvideInput = input ?? false;
 
 // try it on browser console log to see results
